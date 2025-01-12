@@ -1,58 +1,57 @@
-import { useEffect, useGlobals } from "storybook/internal/preview-api";
+import { useEffect, useGlobals, useChannel, addons } from "storybook/internal/preview-api";
 import type {
-  Renderer,
-  StoryContext,
-  PartialStoryFn as StoryFunction,
+	Renderer,
+	StoryContext,
+	PartialStoryFn as StoryFunction,
 } from "storybook/internal/types";
+import { global } from '@storybook/global';
 
-import { KEY } from "./constants";
+import { PARAM_KEY } from './constants';
+import { addStyles, clearStyles, getScheme, setScheme } from './helpers';
+import outlineCSS from './outlineCSS';
+
 
 export const withGlobals = (
-  StoryFn: StoryFunction<Renderer>,
-  context: StoryContext<Renderer>,
+	StoryFn: StoryFunction<Renderer>,
+	context: StoryContext<Renderer>,
 ) => {
-  const [globals] = useGlobals();
-  const myAddon = globals[KEY];
-  const canvas = context.canvasElement as ParentNode;
+	const [ globals ] = useGlobals();
+	const currentValue = globals[PARAM_KEY];
+	const params = context.parameters[PARAM_KEY];
 
-  // Is the addon being used in the docs panel
-  const isInDocs = context.viewMode === "docs";
+	// Set classes
+	useEffect(
+		() => {
+			if (context.viewMode === "docs") {
+				// Docs / Autodocs
+				const stories = global.document.querySelectorAll('.docs-story');
+				const scheme = getScheme(currentValue);
+				stories.forEach((story) => {
+					setScheme(story, scheme, params.lightModeClass, params.darkModeClass);
+				});
 
-  useEffect(() => {
-    if (!isInDocs) {
-      addExtraContentToStory(canvas, {
-        myAddon,
-      });
-    }
-  }, [myAddon, isInDocs]);
+			} else {
+				// Story page
+				setScheme(global.document.documentElement, getScheme(currentValue), params.lightModeClass, params.darkModeClass);
+			}
 
-  return StoryFn();
+			return () => {
+				if (context.viewMode === "story") {
+					global.document.documentElement.classList.remove(params.lightModeClass, params.darkModeClass);
+				}
+			};
+		},
+		[ currentValue ],
+	);
+
+	// Set styles
+	useEffect(
+		() => {
+			addStyles(outlineCSS(params.lightModeClass, params.darkModeClass));
+			// return clearStyles;
+		},
+		[ context.id ],
+	);
+
+	return StoryFn();
 };
-
-/**
- * It's not really recommended to inject content into the canvas like this.
- * But there are use cases
- */
-function addExtraContentToStory(canvas: ParentNode, state: Object) {
-  const preElement =
-    canvas.querySelector(`[data-id="${KEY}"]`) ||
-    canvas.appendChild(document.createElement("pre"));
-
-  preElement.setAttribute("data-id", KEY);
-  preElement.setAttribute(
-    "style",
-    `
-    margin-top: 1rem;
-    padding: 1rem;
-    background-color: #eee;
-    border-radius: 3px;
-    overflow: scroll;
-  `,
-  );
-
-  preElement.innerHTML = `This snippet is injected by the withGlobals decorator.
-It updates as the user interacts with the ⚡ or Theme tools in the toolbar above.
-
-${JSON.stringify(state, null, 2)}
-`;
-}

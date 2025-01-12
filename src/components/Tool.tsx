@@ -1,40 +1,48 @@
-import React, { memo, useCallback, useEffect } from "react";
-import { useGlobals, type API } from "storybook/internal/manager-api";
-import { IconButton } from "storybook/internal/components";
-import { ADDON_ID, KEY, TOOL_ID } from "../constants";
-import { LightningIcon } from "@storybook/icons";
+import React, { memo, useCallback } from 'react';
 
-export const Tool = memo(function MyAddonSelector({ api }: { api: API }) {
-  const [globals, updateGlobals, storyGlobals] = useGlobals();
+import { useGlobals } from 'storybook/internal/manager-api';
+import { IconButton } from 'storybook/internal/components';
+import { StopAltHollowIcon, StopAltIcon, MirrorIcon } from '@storybook/icons';
 
-  const isLocked = KEY in storyGlobals;
-  const isActive = !!globals[KEY];
+import { ADDON_ID, PARAM_KEY, TOOL_ID, SCHEME_CODE_AUTO, SCHEME_CODE_DARK, SCHEME_CODE_LIGHT } from '../constants';
 
-  const toggle = useCallback(() => {
-    updateGlobals({
-      [KEY]: !isActive,
-    });
-  }, [isActive]);
 
-  useEffect(() => {
-    api.setAddonShortcut(ADDON_ID, {
-      label: "Toggle Measure [O]",
-      defaultShortcut: ["O"],
-      actionName: "outline",
-      showInMenu: false,
-      action: toggle,
-    });
-  }, [toggle, api]);
+const getIcon = (scheme) => {
+	if (scheme === SCHEME_CODE_LIGHT) {
+		return <StopAltHollowIcon />;
+	}
 
-  return (
-    <IconButton
-      key={TOOL_ID}
-      active={isActive}
-      disabled={isLocked}
-      title="Enable my addon"
-      onClick={toggle}
-    >
-      <LightningIcon />
-    </IconButton>
-  );
+	if (scheme === SCHEME_CODE_DARK) {
+		return <StopAltIcon />;
+	}
+
+	return <MirrorIcon /> ;
+};
+
+export const Tool = memo(() => {
+	const [ globals, updateGlobals ] = useGlobals();
+
+	const currentScheme = globals[PARAM_KEY];
+	const toggleScheme = useCallback(
+		() => {
+			if (currentScheme === SCHEME_CODE_AUTO) {
+				updateGlobals({ [PARAM_KEY]: SCHEME_CODE_DARK });
+			} else if (currentScheme === SCHEME_CODE_DARK) {
+				updateGlobals({ [PARAM_KEY]: SCHEME_CODE_LIGHT });
+			} else {
+				updateGlobals({ [PARAM_KEY]: SCHEME_CODE_AUTO });
+			}
+		},
+		[ currentScheme ],
+	);
+
+	return (
+		<IconButton
+			key={TOOL_ID}
+			title="Scheme toogler"
+			onClick={toggleScheme}
+		>
+			{getIcon(currentScheme)}
+		</IconButton>
+	);
 });

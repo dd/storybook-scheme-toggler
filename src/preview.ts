@@ -26,8 +26,10 @@ const preview: ProjectAnnotations<Renderer> = {
 	},
 	parameters: {
 		[PARAM_KEY]: {
-			darkModeClass: 'dark',
-			lightModeClass: 'light',
+			darkBackground: '#121212',
+			lightBackground: '#f1f1f1',
+			darkModeClass: 'sbpst-dark',
+			lightModeClass: 'sbpst-light',
 		},
 	},
 };

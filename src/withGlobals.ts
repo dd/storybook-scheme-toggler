@@ -47,8 +47,8 @@ export const withGlobals = (
 	// Set styles
 	useEffect(
 		() => {
-			addStyles(outlineCSS(params.lightModeClass, params.darkModeClass));
-			// return clearStyles;
+			addStyles(outlineCSS(params));
+			return clearStyles;
 		},
 		[ context.id ],
 	);

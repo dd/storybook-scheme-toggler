@@ -80,6 +80,16 @@ Background color for the dark scheme. Default: `#121212`.
 Background color for the light scheme. Default: `#f1f1f1`.
 
 
+### darkColor
+
+Text color for the dark scheme. Default: `#c9cdcf`.
+
+
+### lightColor
+
+Text color for the light scheme. Default: `#2e3438`.
+
+
 ### darkModeClass
 
 Class for the dark scheme. Default: `sbpst-dark`.

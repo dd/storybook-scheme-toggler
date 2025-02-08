@@ -17,6 +17,7 @@ export default function outlineCSS(params) {
 :where(.sbpst-scheme_preview .${params.lightModeClass}),
 :where(.sbpst-scheme_preview .${params.darkModeClass}) {
 	background-color: light-dark(${params.lightBackground}, ${params.darkBackground});
+	color: light-dark(${params.lightColor}, ${params.darkColor});
 }
 
 :root:has(.sbpst-scheme_preview),

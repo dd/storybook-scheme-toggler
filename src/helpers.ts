@@ -6,7 +6,7 @@ import { STYLES_ID, SCHEME_CODE_DARK, SCHEME_CODE_LIGHT } from './constants';
 export const clearStyles = () => {
 	const element = global.document.getElementById(STYLES_ID);
 	if (element) {
-		element.removeChild(element);
+		element.parentElement.removeChild(element);
 	}
 };
 

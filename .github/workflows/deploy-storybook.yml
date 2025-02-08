@@ -40,6 +40,11 @@ jobs:
       - name: Build Storybook
         run: pnpm run build-storybook --output-dir storybook-static
 
+      - name: Configure Git for GitHub Actions bot
+        run: |
+          git config --local user.name 'github-actions[bot]'
+          git config --local user.email 'github-actions[bot]@users.noreply.github.com'
+
       - name: Deploy to GitHub Pages
         run: pnpm run deploy-storybook -d storybook-static
         env:

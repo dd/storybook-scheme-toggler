@@ -1,6 +1,6 @@
 import React, { memo, useCallback } from 'react';
 
-import { useGlobals } from 'storybook/internal/manager-api';
+import { useGlobals, useParameter } from 'storybook/internal/manager-api';
 import { IconButton } from 'storybook/internal/components';
 import { StopAltHollowIcon, StopAltIcon, MirrorIcon } from '@storybook/icons';
 
@@ -22,15 +22,28 @@ const getIcon = (scheme) => {
 export const Tool = memo(() => {
 	const [ globals, updateGlobals ] = useGlobals();
 
+	const parameters = useParameter(PARAM_KEY, {});
 	const currentScheme = globals[PARAM_KEY];
+
 	const toggleScheme = useCallback(
 		() => {
-			if (currentScheme === SCHEME_CODE_AUTO) {
-				updateGlobals({ [PARAM_KEY]: SCHEME_CODE_DARK });
-			} else if (currentScheme === SCHEME_CODE_DARK) {
-				updateGlobals({ [PARAM_KEY]: SCHEME_CODE_LIGHT });
+			if (parameters.enableAutoMode) {
+				// `auto` -> `dark` -> `light`
+				if (currentScheme === SCHEME_CODE_AUTO) {
+					updateGlobals({ [PARAM_KEY]: SCHEME_CODE_DARK });
+				} else if (currentScheme === SCHEME_CODE_DARK) {
+					updateGlobals({ [PARAM_KEY]: SCHEME_CODE_LIGHT });
+				} else {
+					updateGlobals({ [PARAM_KEY]: SCHEME_CODE_AUTO });
+				}
+
 			} else {
-				updateGlobals({ [PARAM_KEY]: SCHEME_CODE_AUTO });
+				// `dark` -> `light`
+				if (currentScheme === SCHEME_CODE_DARK) {
+					updateGlobals({ [PARAM_KEY]: SCHEME_CODE_LIGHT });
+				} else {
+					updateGlobals({ [PARAM_KEY]: SCHEME_CODE_DARK });
+				}
 			}
 		},
 		[ currentScheme ],

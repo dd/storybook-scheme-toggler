@@ -77,6 +77,7 @@ export default {
 			lightColor: '#ffffff',
 			darkModeClass: 'dark',
 			lightModeClass: 'light',
+			enableAutoMode: false,
 		},
 	},
 };
@@ -112,3 +113,7 @@ Class for the dark scheme. Default: `sbpst-dark`.
 
 Class for the light scheme. Default: `sbpst-light`.
 
+
+### enableAutoMode
+
+A parameter that enables auto mode, linking the preview scheme state to the browser's color scheme.. Default: `false`.

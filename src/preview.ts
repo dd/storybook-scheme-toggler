@@ -10,7 +10,7 @@
  */
 import type { ProjectAnnotations, Renderer } from 'storybook/internal/types';
 
-import { PARAM_KEY, SCHEME_CODE_AUTO } from './constants';
+import { PARAM_KEY, SCHEME_CODE_LIGHT } from './constants';
 import { withGlobals } from './withGlobals';
 
 
@@ -22,7 +22,7 @@ import { withGlobals } from './withGlobals';
 const preview: ProjectAnnotations<Renderer> = {
 	decorators: [ withGlobals ],
 	initialGlobals: {
-		[PARAM_KEY]: SCHEME_CODE_AUTO,
+		[PARAM_KEY]: SCHEME_CODE_LIGHT,
 	},
 	parameters: {
 		[PARAM_KEY]: {
@@ -32,6 +32,7 @@ const preview: ProjectAnnotations<Renderer> = {
 			lightColor: '#2e3438',
 			darkModeClass: 'sbpst-dark',
 			lightModeClass: 'sbpst-light',
+			enableAutoMode: false,
 		},
 	},
 };

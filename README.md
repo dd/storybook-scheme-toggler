@@ -7,6 +7,12 @@
 
 **Storybook Preview Scheme Toggler** allows you to easily switch between light, dark, and auto (browser-synced) themes directly from the Storybook toolbar.
 
+<p>
+	<img src="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/preview.gif" width="560" alt="Demonstration of Storybook Preview Scheme Toggler in action" />
+</p>
+
+[Live Demo](https://dd.github.io/storybook-scheme-toggler/?path=/docs/preview--docs)
+
 
 ## Installation
 

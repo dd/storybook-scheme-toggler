@@ -1,4 +1,4 @@
-import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as r}from"./index-CePRvBtH.js";import{ak as s,al as a}from"./index-D9KWML2C.js";import"./index-DmM0KDA7.js";import"./iframe-CiLhpdiw.js";import"../sb-preview/runtime.js";import"./index-nLeaPAJ8.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";const i=`<div style="margin: 0 auto; text-align: center; padding-bottom: 20px;">
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as r}from"./index-CePRvBtH.js";import{ak as s,al as a}from"./index-BfTz-xY5.js";import"./index-DmM0KDA7.js";import"./iframe-FpW93pl5.js";import"../sb-preview/runtime.js";import"./index-nLeaPAJ8.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";const i=`<div style="margin: 0 auto; text-align: left; padding-bottom: 20px;">
   <img src="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg" alt="Storybook Preview Scheme Toggler Logo" width="64" height="64" align="center">
 </div>
 

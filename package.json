@@ -44,7 +44,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "npm run build && auto shipit",
     "storybook": "storybook dev -p ${APP_PORT:-6009}",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-storybook": "gh-pages"
   },
   "publishConfig": {
     "access": "public"
@@ -85,6 +86,7 @@
     "@storybook/test": "^8.4.7",
     "@vitejs/plugin-react": "^4.3.4",
     "auto": "^11.3.0",
+    "gh-pages": "^6.3.0",
     "npm-run-all2": "^7.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

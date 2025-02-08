@@ -74,7 +74,7 @@
       "preact",
       "react-native"
     ],
-    "icon": "https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/images/storiybook_icon.svg"
+    "icon": "https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.4.7",

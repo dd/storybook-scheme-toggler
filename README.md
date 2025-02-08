@@ -1,3 +1,8 @@
+<div style="margin: 0 auto; text-align: center; padding-bottom: 20px;">
+  <img src="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg" alt="Storybook Preview Scheme Toggler Logo" width="64" height="64" align="center">
+</div>
+
+
 # Storybook Preview Scheme Toggler
 
 **Storybook Preview Scheme Toggler** allows you to easily switch between light, dark, and auto (browser-synced) themes directly from the Storybook toolbar.
@@ -62,6 +67,8 @@ export default {
 		previewSchemeToggler: {
 			darkBackground: '#ffffff',
 			lightBackground: '#000000',
+			darkColor: '#000000',
+			lightColor: '#ffffff',
 			darkModeClass: 'dark',
 			lightModeClass: 'light',
 		},

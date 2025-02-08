@@ -7,7 +7,7 @@
     "dark",
     "light"
   ],
-  "version": "0.0.0",
+  "version": "1.0.0-dev.1",
   "author": "Dmitry Dobrynin <dd@tovarisch.engineer>",
   "license": "LGPL-3.0",
   "repository": {
@@ -39,9 +39,10 @@
   ],
   "scripts": {
     "build": "tsup",
-    "build:watch": "npm run build -- --watch",
-    "start": "run-p build:watch \"storybook --quiet\"",
+    "build:watch": "tsup --watch",
+    "start": "run-p build:watch \"storybook --quiet --no-open\"",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "release": "npm run build && auto shipit",
     "storybook": "storybook dev -p ${APP_PORT:-6009}",
     "build-storybook": "storybook build"
   },
@@ -72,24 +73,29 @@
       "preact",
       "react-native"
     ],
-    "icon": "https://user-images.githubusercontent.com/321738/63501763-88dbf600-c4cc-11e9-96cd-94adadc2fd72.png"
+    "icon": "https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/images/storiybook_icon.svg"
   },
   "devDependencies": {
     "@storybook/addon-essentials": "^8.4.7",
     "@storybook/addon-interactions": "^8.4.7",
     "@storybook/addon-links": "^8.4.7",
+    "@storybook/blocks": "^8.4.7",
     "@storybook/react": "^8.4.7",
     "@storybook/react-vite": "^8.4.7",
     "@storybook/test": "^8.4.7",
     "@vitejs/plugin-react": "^4.3.4",
+    "auto": "^11.3.0",
     "npm-run-all2": "^7.0.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "storybook": "^8.4.7",
-    "tsup": "^8.3.5",
-    "vite": "^6.0.7"
+    "tsup": "^8.3.6",
+    "vite": "^6.1.0"
   },
   "peerDependencies": {
     "storybook": "^8.4.7"
+  },
+  "dependencies": {
+    "@storybook/icons": "^1.3.2"
   }
 }

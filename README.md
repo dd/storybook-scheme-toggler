@@ -1,4 +1,4 @@
-<div style="margin: 0 auto; text-align: center; padding-bottom: 20px;">
+<div style="margin: 0 auto; text-align: left; padding-bottom: 20px;">
   <img src="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg" alt="Storybook Preview Scheme Toggler Logo" width="64" height="64" align="center">
 </div>
 

@@ -1,7 +1,5 @@
-import type { AutoRc } from 'auto';
-
-
-export default {
+/** @type {import('auto').AutoRc} */
+module.exports = {
 	baseBranch: 'main',
 	labels: [
 		{
@@ -23,4 +21,4 @@ export default {
 	],
 	prereleaseBranches: ['next'],
 	versionBranches: true,
-} satisfies AutoRc;
+};

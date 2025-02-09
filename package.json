@@ -7,7 +7,7 @@
     "dark",
     "light"
   ],
-  "version": "1.0.0-rc.3",
+  "version": "1.0.1-rc.1",
   "author": "Dmitry Dobrynin <dd@tovarisch.engineer>",
   "license": "LGPL-3.0",
   "repository": {
@@ -42,7 +42,7 @@
     "build:watch": "tsup --watch",
     "start": "run-p build:watch \"storybook --quiet --no-open\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "npm run build && auto shipit",
+    "release": "pnpm run build && auto shipit",
     "storybook": "storybook dev -p ${APP_PORT:-6009}",
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages",

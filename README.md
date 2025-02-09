@@ -116,4 +116,4 @@ Class for the light scheme. Default: `sbpst-light`.
 
 ### enableAutoMode
 
-A parameter that enables auto mode, linking the preview scheme state to the browser's color scheme.. Default: `false`.
+A parameter that enables auto mode, linking the preview scheme state to the browser's color scheme. Default: `false`.

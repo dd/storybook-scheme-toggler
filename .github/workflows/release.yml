@@ -12,9 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Prepare repository
-        run: git fetch --unshallow --tags
-
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:

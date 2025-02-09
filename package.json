@@ -7,7 +7,7 @@
     "dark",
     "light"
   ],
-  "version": "1.0.0-dev.1",
+  "version": "1.0.0-rc.1",
   "author": "Dmitry Dobrynin <dd@tovarisch.engineer>",
   "license": "LGPL-3.0",
   "repository": {
@@ -45,7 +45,8 @@
     "release": "npm run build && auto shipit",
     "storybook": "storybook dev -p ${APP_PORT:-6009}",
     "build-storybook": "storybook build",
-    "deploy-storybook": "gh-pages"
+    "deploy-storybook": "gh-pages",
+    "release-tag": "git tag -a \"v$(pnpm pkg get version | xargs)\" -m \"v$(pnpm pkg get version | xargs)\""
   },
   "publishConfig": {
     "access": "public"

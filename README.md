@@ -19,7 +19,7 @@
 First, install the package:
 
 ```sh
-npm install --save-dev storybook-preview-scheme-toggler
+pnpm add -D storybook-preview-scheme-toggler
 ```
 
 Then, register it as an addon in `.storybook/main.js`:

@@ -7,3 +7,5 @@ build-storybook.log
 package/
 *.tgz
 stuff/
+*.sublime-project
+*.sublime-workspace

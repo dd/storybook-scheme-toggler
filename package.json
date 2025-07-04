@@ -46,7 +46,7 @@
     "build:watch": "tsup --watch",
     "start": "run-p build:watch \"storybook --quiet --no-open\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "release": "pnpm run build && auto shipit",
+    "release": "pnpm build && auto shipit",
     "storybook": "storybook dev -p ${APP_PORT:-6009}",
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages",
@@ -100,7 +100,7 @@
     "vite": "^6.1.0"
   },
   "peerDependencies": {
-    "storybook": "^8.4.7"
+    "storybook": ">=8.4.7 <10.0.0"
   },
   "dependencies": {
     "@storybook/icons": "^1.3.2"

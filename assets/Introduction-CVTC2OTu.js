@@ -1,4 +1,4 @@
-import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as r}from"./index-CePRvBtH.js";import{ak as s,al as a}from"./index-De_aAelb.js";import"./index-DmM0KDA7.js";import"./iframe-Bv_cYz0R.js";import"../sb-preview/runtime.js";import"./index-nLeaPAJ8.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";const i=`<div style="margin: 0 auto; text-align: left; padding-bottom: 20px;">
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as r}from"./index-CePRvBtH.js";import{ak as a,al as s}from"./index-CWa4tTSq.js";import"./index-DmM0KDA7.js";import"./iframe-C0IHb5WO.js";import"../sb-preview/runtime.js";import"./index-nLeaPAJ8.js";import"./index-Cu4lwwaE.js";import"./index-CXQShRbs.js";import"./index-DrFu-skq.js";const i=`<div style="margin: 0 auto; text-align: left; padding-bottom: 20px;">
   <img src="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg" alt="Storybook Preview Scheme Toggler Logo" width="64" height="64" align="center">
 </div>
 
@@ -19,7 +19,7 @@ import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{useMDXComponents as r}from"
 First, install the package:
 
 \`\`\`sh
-npm install --save-dev storybook-preview-scheme-toggler
+pnpm add -D storybook-preview-scheme-toggler
 \`\`\`
 
 Then, register it as an addon in \`.storybook/main.js\`:
@@ -117,5 +117,5 @@ Class for the light scheme. Default: \`sbpst-light\`.
 ### enableAutoMode
 
 A parameter that enables auto mode, linking the preview scheme state to the browser's color scheme. Default: \`false\`.
-`;function o(e){return t.jsxs(t.Fragment,{children:[t.jsx(s,{title:"Introduction"}),`
-`,t.jsx(a,{children:i})]})}function k(e={}){const{wrapper:n}={...r(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(o,{...e})}):o()}export{k as default};
+`;function o(e){return t.jsxs(t.Fragment,{children:[t.jsx(a,{title:"Introduction"}),`
+`,t.jsx(s,{children:i})]})}function k(e={}){const{wrapper:n}={...r(),...e.components};return n?t.jsx(n,{...e,children:t.jsx(o,{...e})}):o()}export{k as default};

@@ -1,7 +1,7 @@
 import React, { memo, useCallback } from 'react';
 
 import { useGlobals, useParameter } from 'storybook/internal/manager-api';
-import { IconButton } from 'storybook/internal/components';
+import { Button } from 'storybook/internal/components';
 import { StopAltHollowIcon, StopAltIcon, MirrorIcon } from '@storybook/icons';
 
 import { ADDON_ID, PARAM_KEY, TOOL_ID, SCHEME_CODE_AUTO, SCHEME_CODE_DARK, SCHEME_CODE_LIGHT } from '../constants';
@@ -50,12 +50,13 @@ export const Tool = memo(() => {
 	);
 
 	return (
-		<IconButton
+		<Button
 			key={TOOL_ID}
 			title="Scheme toogler"
+			ariaLabel="Toggle color scheme"
 			onClick={toggleScheme}
 		>
 			{getIcon(currentScheme)}
-		</IconButton>
+		</Button>
 	);
 });

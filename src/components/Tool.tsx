@@ -1,13 +1,13 @@
 import React, { memo, useCallback } from 'react';
 
 import { useGlobals, useParameter } from 'storybook/internal/manager-api';
-import { IconButton } from 'storybook/internal/components';
+import { Button } from 'storybook/internal/components';
 import { StopAltHollowIcon, StopAltIcon, MirrorIcon } from '@storybook/icons';
 
-import { ADDON_ID, PARAM_KEY, TOOL_ID, SCHEME_CODE_AUTO, SCHEME_CODE_DARK, SCHEME_CODE_LIGHT } from '../constants';
+import { PARAM_KEY, TOOL_ID, SCHEME_CODE_AUTO, SCHEME_CODE_DARK, SCHEME_CODE_LIGHT } from '../constants';
 
 
-const getIcon = (scheme) => {
+const getIcon = (scheme: string) => {
 	if (scheme === SCHEME_CODE_LIGHT) {
 		return <StopAltHollowIcon />;
 	}
@@ -46,16 +46,17 @@ export const Tool = memo(() => {
 				}
 			}
 		},
-		[ currentScheme ],
+		[ currentScheme, parameters.enableAutoMode ],
 	);
 
 	return (
-		<IconButton
+		<Button
 			key={TOOL_ID}
-			title="Scheme toogler"
+			title="Scheme toggler"
+			ariaLabel="Toggle color scheme"
 			onClick={toggleScheme}
 		>
 			{getIcon(currentScheme)}
-		</IconButton>
+		</Button>
 	);
 });

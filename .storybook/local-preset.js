@@ -1,3 +1,8 @@
+import { createRequire } from "node:module";
+
+const require = createRequire(import.meta.url);
+
+
 /**
  * to load the built addon in this test Storybook
  */
@@ -9,7 +14,7 @@ function managerEntries(entry = []) {
   return [...entry, require.resolve("../dist/manager.js")];
 }
 
-module.exports = {
+export default {
   managerEntries,
   previewAnnotations,
 };

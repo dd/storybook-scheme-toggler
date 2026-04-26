@@ -6,7 +6,7 @@ import { STYLES_ID, SCHEME_CODE_DARK, SCHEME_CODE_LIGHT } from './constants';
 export const clearStyles = () => {
 	const element = global.document.getElementById(STYLES_ID);
 	if (element) {
-		element.parentElement.removeChild(element);
+		element.remove();
 	}
 };
 
@@ -28,7 +28,7 @@ export const addStyles = (css: string) => {
 };
 
 
-export const getScheme = (value) => {
+export const getScheme = (value: string) => {
 	if (value === SCHEME_CODE_DARK || value === SCHEME_CODE_LIGHT) {
 		return value;
 	}
@@ -41,7 +41,7 @@ export const getScheme = (value) => {
 };
 
 
-export const setScheme = (element, theme: string, lightClass: string, darkClass: string) => {
+export const setScheme = (element: Element, theme: string, lightClass: string, darkClass: string) => {
 	if (theme === SCHEME_CODE_DARK) {
 		element.classList.add(darkClass);
 		element.classList.remove(lightClass);

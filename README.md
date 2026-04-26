@@ -4,6 +4,15 @@
 
 # Storybook Preview Scheme Toggler
 
+<p align="center" class="readme-shields" >
+	<a href="https://www.npmjs.com/package/storybook-preview-scheme-toggler" target="_blank" title="Version" class="shield" >
+		<img src="https://img.shields.io/npm/v/storybook-preview-scheme-toggler.svg" alt="Version">
+	</a>
+	<a href="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/LICENSE" target="_blank" title="License - LGPL-3.0" class="shield" >
+		<img src="https://img.shields.io/npm/l/storybook-preview-scheme-toggler" alt="License - LGPL-3.0" />
+	</a>
+</p>
+
 **Storybook Preview Scheme Toggler** allows you to easily switch between light, dark, and auto (browser-synced) themes directly from the Storybook toolbar.
 
 <p>

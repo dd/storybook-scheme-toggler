@@ -1,6 +1,6 @@
 {
   "name": "storybook-preview-scheme-toggler",
-  "description": "Storybook Preview Scheme Toggler enables seamless switching between light, dark, and auto (browser-synced) themes directly from the Storybook toolbar.",
+  "description": "Storybook 9/10 addon that enables seamless switching between light, dark, and auto (browser-synced) color schemes directly from the toolbar.",
   "keywords": [
     "storybook-addons",
     "scheme",

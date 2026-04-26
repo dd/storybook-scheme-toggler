@@ -26,7 +26,7 @@ export const withGlobals = (
 				// Docs / Autodocs
 				const stories = global.document.querySelectorAll('.docs-story');
 				const scheme = getScheme(currentValue);
-				stories.forEach((story) => {
+				stories.forEach((story: Element) => {
 					setScheme(story, scheme, params.lightModeClass, params.darkModeClass);
 				});
 
@@ -41,7 +41,7 @@ export const withGlobals = (
 				}
 			};
 		},
-		[ currentValue ],
+		[ currentValue, params ],
 	);
 
 	// Set styles

@@ -15,7 +15,7 @@ addons.register(ADDON_ID, () => {
 		title: "Preview Scheme Toggler",
 		type: types.TOOL,
 		// match: ({ viewMode, tabId }) => !tabId && viewMode === 'story',
-		match: ({ tabId }) => !tabId,
+		match: ({ tabId }: { tabId: string | undefined }) => !tabId,
 		render: Tool,
 	});
 });

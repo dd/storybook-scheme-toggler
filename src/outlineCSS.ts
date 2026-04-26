@@ -1,4 +1,13 @@
-export default function outlineCSS(params) {
+interface OutlineCSSParams {
+	lightModeClass: string;
+	darkModeClass: string;
+	lightBackground: string;
+	darkBackground: string;
+	lightColor: string;
+	darkColor: string;
+}
+
+export default function outlineCSS(params: OutlineCSSParams) {
 	return /* css */ `
 :root.${params.lightModeClass},
 .docs-story.${params.lightModeClass},

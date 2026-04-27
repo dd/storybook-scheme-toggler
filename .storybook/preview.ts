@@ -1,11 +1,11 @@
-import type { Preview } from "@storybook/react";
+import type { Preview } from "@storybook/react-vite";
 
 import './styles.css';
 
 
 const preview: Preview = {
 	parameters: {
-		backgrounds: { disable: true },
+		backgrounds: { disabled: true },
 		reactStrictMode: false,
 	},
 };

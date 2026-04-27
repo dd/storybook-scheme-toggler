@@ -1,6 +1,6 @@
 {
   "name": "storybook-preview-scheme-toggler",
-  "description": "Storybook Preview Scheme Toggler enables seamless switching between light, dark, and auto (browser-synced) themes directly from the Storybook toolbar.",
+  "description": "Storybook 9/10 addon that enables seamless switching between light, dark, and auto (browser-synced) color schemes directly from the toolbar.",
   "keywords": [
     "storybook-addons",
     "scheme",
@@ -43,8 +43,7 @@
   ],
   "scripts": {
     "build": "tsup",
-    "build:watch": "tsup --watch",
-    "start": "run-p build:watch \"storybook --quiet --no-open\"",
+    "start": "run-p \"build --watch\" \"storybook -p ${APP_PORT:-6009} --quiet --no-open\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "pnpm build && auto shipit",
     "storybook": "storybook dev -p ${APP_PORT:-6009}",
@@ -82,27 +81,25 @@
     "icon": "https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg"
   },
   "devDependencies": {
-    "@storybook/addon-essentials": "^8.4.7",
-    "@storybook/addon-interactions": "^8.4.7",
-    "@storybook/addon-links": "^8.4.7",
-    "@storybook/blocks": "^8.4.7",
-    "@storybook/react": "^8.4.7",
-    "@storybook/react-vite": "^8.4.7",
-    "@storybook/test": "^8.4.7",
-    "@vitejs/plugin-react": "^4.3.4",
-    "auto": "^11.3.0",
+    "@storybook/addon-docs": "^10.3.5",
+    "@storybook/addon-links": "^10.3.5",
+    "@storybook/react": "^10.3.5",
+    "@storybook/react-vite": "^10.3.5",
+    "@vitejs/plugin-react": "^4.7.0",
+    "auto": "^11.3.6",
     "gh-pages": "^6.3.0",
     "npm-run-all2": "^7.0.2",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "storybook": "^8.4.7",
-    "tsup": "^8.3.6",
-    "vite": "^6.1.0"
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "storybook": "^10.3.5",
+    "tsup": "^8.5.1",
+    "vite": "^6.4.2"
   },
   "peerDependencies": {
-    "storybook": ">=8.4.7 <10.0.0"
+    "storybook": ">=9.0.0 <11.0.0"
   },
   "dependencies": {
-    "@storybook/icons": "^1.3.2"
-  }
+    "@storybook/icons": "^1.6.0"
+  },
+  "packageManager": "pnpm@10.32.1+sha512.a706938f0e89ac1456b6563eab4edf1d1faf3368d1191fc5c59790e96dc918e4456ab2e67d613de1043d2e8c81f87303e6b40d4ffeca9df15ef1ad567348f2be"
 }

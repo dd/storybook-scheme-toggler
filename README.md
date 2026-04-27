@@ -2,8 +2,16 @@
   <img src="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg" alt="Storybook Preview Scheme Toggler Logo" width="64" height="64" align="center">
 </div>
 
-
 # Storybook Preview Scheme Toggler
+
+<p align="center" class="readme-shields" >
+	<a href="https://www.npmjs.com/package/storybook-preview-scheme-toggler" target="_blank" title="Version" class="shield" >
+		<img src="https://img.shields.io/npm/v/storybook-preview-scheme-toggler.svg" alt="Version">
+	</a>
+	<a href="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/LICENSE" target="_blank" title="License - LGPL-3.0" class="shield" >
+		<img src="https://img.shields.io/npm/l/storybook-preview-scheme-toggler" alt="License - LGPL-3.0" />
+	</a>
+</p>
 
 **Storybook Preview Scheme Toggler** allows you to easily switch between light, dark, and auto (browser-synced) themes directly from the Storybook toolbar.
 
@@ -12,6 +20,11 @@
 </p>
 
 [Live Demo](https://dd.github.io/storybook-scheme-toggler/?path=/docs/preview--docs)
+
+
+## Requirements
+
+Storybook **9** or **10** (`>=9.0.0 <11.0.0`).
 
 
 ## Installation
@@ -71,12 +84,12 @@ This addon adds the following parameters to Storybook under the `previewSchemeTo
 export default {
 	parameters: {
 		previewSchemeToggler: {
-			darkBackground: '#ffffff',
-			lightBackground: '#000000',
-			darkColor: '#000000',
-			lightColor: '#ffffff',
-			darkModeClass: 'dark',
-			lightModeClass: 'light',
+			darkBackground: '#121212',
+			lightBackground: '#f1f1f1',
+			darkColor: '#c9cdcf',
+			lightColor: '#2e3438',
+			darkModeClass: 'sbpst-dark',
+			lightModeClass: 'sbpst-light',
 			enableAutoMode: false,
 		},
 	},

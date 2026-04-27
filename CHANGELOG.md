@@ -1,3 +1,25 @@
+# v2.0.0 (Mon Apr 27 2026)
+
+#### 💥 Breaking Change
+
+- 📝 (docs): Update docs [#9](https://github.com/dd/storybook-scheme-toggler/pull/9) ([@dd](https://github.com/dd))
+
+#### 🐛 Bug Fix
+
+- 🐛 (gh): Fix deploy [#13](https://github.com/dd/storybook-scheme-toggler/pull/13) ([@dd](https://github.com/dd))
+- Fix release [#12](https://github.com/dd/storybook-scheme-toggler/pull/12) ([@dd](https://github.com/dd))
+- 📝 (docs): Add shields [#10](https://github.com/dd/storybook-scheme-toggler/pull/10) ([@dd](https://github.com/dd))
+- 🐛 (package): Update reqs versions [#8](https://github.com/dd/storybook-scheme-toggler/pull/8) ([@dd](https://github.com/dd))
+- 🔖 (package): Update version [#7](https://github.com/dd/storybook-scheme-toggler/pull/7) ([@dd](https://github.com/dd))
+- Dev [#6](https://github.com/dd/storybook-scheme-toggler/pull/6) ([@dd](https://github.com/dd))
+- Upgrade versions [#4](https://github.com/dd/storybook-scheme-toggler/pull/4) ([@dd](https://github.com/dd))
+
+#### Authors: 1
+
+- Dmitry Dobrynin ([@dd](https://github.com/dd))
+
+---
+
 # v1.0.3 (Fri Jul 04 2025)
 
 #### 🐛 Bug Fix

@@ -1,10 +1,10 @@
-import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{u as s,c as r,e as a}from"./blocks-BedR104w.js";import"./preload-helper-Dp1pzeXC.js";import"./iframe-Bh0AxhAH.js";import"./index-CeW6mcPL.js";const i=`<div style="margin: 0 auto; text-align: left; padding-bottom: 20px;">
+import{j as t}from"./jsx-runtime-D_zvdyIk.js";import{u as s,c as r,e as a}from"./blocks-BISVetAy.js";import"./preload-helper-Dp1pzeXC.js";import"./iframe-D4KAsqhu.js";import"./index-Byrp6kMM.js";const i=`<div style="margin: 0 auto; text-align: left; padding-bottom: 20px;">
   <img src="https://raw.githubusercontent.com/dd/storybook-scheme-toggler/main/.github/media/storiybook_icon.svg" alt="Storybook Preview Scheme Toggler Logo" width="64" height="64" align="center">
 </div>
 
 # Storybook Preview Scheme Toggler
 
-<p align="center" class="readme-shields" >
+<p class="readme-shields" >
 	<a href="https://www.npmjs.com/package/storybook-preview-scheme-toggler" target="_blank" title="Version" class="shield" >
 		<img src="https://img.shields.io/npm/v/storybook-preview-scheme-toggler.svg" alt="Version">
 	</a>

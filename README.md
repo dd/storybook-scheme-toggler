@@ -4,7 +4,7 @@
 
 # Storybook Preview Scheme Toggler
 
-<p align="center" class="readme-shields" >
+<p class="readme-shields" >
 	<a href="https://www.npmjs.com/package/storybook-preview-scheme-toggler" target="_blank" title="Version" class="shield" >
 		<img src="https://img.shields.io/npm/v/storybook-preview-scheme-toggler.svg" alt="Version">
 	</a>

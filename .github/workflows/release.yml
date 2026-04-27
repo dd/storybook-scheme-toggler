@@ -6,6 +6,10 @@ on:
       - main
       - next
 
+permissions:
+  contents: write
+  workflows: write
+
 jobs:
   release:
     runs-on: ubuntu-latest

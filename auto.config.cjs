@@ -20,5 +20,4 @@ module.exports = {
 		},
 	],
 	prereleaseBranches: ['next'],
-	versionBranches: true,
 };
